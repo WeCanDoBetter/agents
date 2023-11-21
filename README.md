@@ -7,7 +7,7 @@ agent framework that streamlines chatbots and AI-driven agent systems.
 
 - [Wikipedia](./src/apis/wikipedia/README.md)
 - [PubMed](./src/apis/pubmed/README.md)
-- [Samantic Scholar](./src/apis/samantic-scholar/README.md)
+- [Semantic Scholar](./src/apis/semantic-scholar/README.md)
 
 ## Example
 
@@ -16,7 +16,7 @@ import { wikipedia } from "./index";
 import { Context } from "@wecandobetter/delphi";
 
 const functionMap = wikipedia.getMap();
-const context = new Context([/* message */], functionMap);
+const context = new Context([/* messages */], functionMap);
 
 // use the context on a Delphi agent, e.g.:
 // const result = await agent.run(context);
