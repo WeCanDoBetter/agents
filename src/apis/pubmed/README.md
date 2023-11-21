@@ -7,10 +7,10 @@ database of biomedical literature for
 ## Example
 
 ```ts
-import { Agent, type ChatMessage, Context } from "@wecandobetter/delphi";
+import { Agent, type ChatMessage, Context, type type ClientOptions } from "@wecandobetter/delphi";
 import { addToMap } from "./index";
 
-async function fn(messages: ChatMessage[]) {
+async function fn(messages: ChatMessage[], options: ClientOptions) {
   // Call the model here and return the result
 }
 

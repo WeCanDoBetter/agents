@@ -18,9 +18,10 @@ export function getMap(): FunctionMap {
 /**
  * Add the NLP functions to the function map.
  * @param map The function map to add the functions to.
+ * @param enabled Whether the functions should be enabled or disabled.
  */
-export function addToMap(map: FunctionMap): void {
+export function addToMap(map: FunctionMap, enabled = true): void {
   for (const func of functions) {
-    map.addFunction(func as AgentFunction<any, any>);
+    map.addFunction(func as AgentFunction<any, any>, enabled);
   }
 }
