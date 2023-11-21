@@ -2,10 +2,7 @@ import { fleschKincaid } from "flesch-kincaid";
 import { AgentFunction, type JSONSchemaType } from "@wecandobetter/delphi";
 import { syllable } from "syllable";
 import { visit } from "unist-util-visit";
-import retextLatin from "retext-latin";
-import { unified } from "unified";
-
-const processor = unified().use(retextLatin);
+import processor from "../processor";
 
 export interface FleschKincaidParameters {
   text: string;

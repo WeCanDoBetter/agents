@@ -36,9 +36,16 @@ also contains a number of examples.
 
 - [Delphi](https://wecandobetter.github.io/delphi/)
 - [We Can Do Better](https://wcdb.life/)
+
+### APIs
+
 - [Wikipedia](https://www.wikipedia.org/)
 - [PubMed](https://pubmed.ncbi.nlm.nih.gov/)
 - [Semantic Scholar](https://www.semanticscholar.org/)
+
+### Utilities
+
+- [NLP](https://en.wikipedia.org/wiki/Natural_language_processing)
 
 ## Contributing
 

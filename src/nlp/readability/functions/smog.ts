@@ -2,10 +2,7 @@ import { smogFormula } from "smog-formula";
 import { AgentFunction, type JSONSchemaType } from "@wecandobetter/delphi";
 import { syllable } from "syllable";
 import { visit } from "unist-util-visit";
-import retextLatin from "retext-latin";
-import { unified } from "unified";
-
-const processor = unified().use(retextLatin);
+import processor from "../processor";
 
 export interface SMOGParameters {
   text: string;
@@ -29,7 +26,7 @@ const SMOGFunction = new AgentFunction<SMOGParameters, number>(
   schema,
   async ({ text }) => {
     let sentences = 0;
-    let polysillabicWords = 0;
+    let polysyllabicWords = 0;
 
     const root = processor.parse(text);
 
@@ -37,13 +34,13 @@ const SMOGFunction = new AgentFunction<SMOGParameters, number>(
       sentences++;
 
       visit(node, "WordNode", (node) => {
-        polysillabicWords += syllable(node.children[0].value) > 2 ? 1 : 0;
+        polysyllabicWords += syllable(node.children[0].value) > 3 ? 1 : 0;
       });
     });
 
     return smogFormula({
       sentence: sentences,
-      polysillabicWord: polysillabicWords,
+      polysillabicWord: polysyllabicWords,
     });
   },
 );

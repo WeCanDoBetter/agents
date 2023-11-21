@@ -1,10 +1,7 @@
 import { colemanLiau } from "coleman-liau";
 import { AgentFunction, type JSONSchemaType } from "@wecandobetter/delphi";
 import { visit } from "unist-util-visit";
-import retextLatin from "retext-latin";
-import { unified } from "unified";
-
-const processor = unified().use(retextLatin);
+import processor from "../processor";
 
 export interface ColemanLiauParameters {
   text: string;

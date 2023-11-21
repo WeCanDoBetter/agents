@@ -34,35 +34,3 @@ addToMap(context.functions, true);
 
 // Now the agent can use the functions in the context
 ```
-
-## Functions
-
-### `author`
-
-Get the author by ID.
-
-| Parameter | Type     | Description |
-| --------- | -------- | ----------- |
-| `id`      | `string` | Author ID   |
-
-### `paper`
-
-Get the paper by ID.
-
-| Parameter | Type     | Description |
-| --------- | -------- | ----------- |
-| `id`      | `string` | Paper ID    |
-
-### `search`
-
-Search for papers.
-
-| Parameter | Type     | Description |
-| --------- | -------- | ----------- |
-| `query`   | `string` | Search term |
-
-## See Also
-
-- [Semantic Scholar API](https://api.semanticscholar.org/)
-- [Delpi](https://github.com/WeCanDoBetter/delphi)
-- [SemanticScholarJS](https://github.com/thomasuebi/semanticscholarjs)
