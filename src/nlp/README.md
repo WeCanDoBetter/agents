@@ -3,6 +3,14 @@
 This utiity provides natural language processing (NLP) functions for
 [Delphi](https://github.com/WeCanDoBetter/delphi).
 
+## Utilities
+
+### Readaibility Scores
+
+- [Coleman-Liau Index](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index)
+- [Flesch-Kincaid Grade Level](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)
+- [SMOG (Simple Measure of Gobbledygook) Index](https://en.wikipedia.org/wiki/SMOG)
+
 ## Example
 
 ```ts

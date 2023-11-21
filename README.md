@@ -13,7 +13,7 @@ agent framework that streamlines chatbots and AI-driven agent systems.
 
 ### Utilities
 
-- [NLP](./src/utilities/nlp/README.md) (readability scores, etc.)
+- [NLP](./src/nlp/README.md) (readability scores, etc.)
 
 ## Example
 
