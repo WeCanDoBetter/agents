@@ -1,0 +1,61 @@
+# Semantic Scholar API for [Delphi](https://github.com/WeCanDoBetter/delphi)
+
+This API provides access to the
+[Semantic Scholar](https://www.semanticscholar.org/) database of papers and
+citations for [Delphi](https://github.com/WeCanDoBetter/delphi).
+
+## Example
+
+```ts
+import { Agent, type ChatMessage, Context } from "@wecandobetter/delphi";
+import { addToMap } from "./index";
+
+async function fn(messages: ChatMessage[]) {
+  // Call the model here and return the result
+}
+
+// Create an agent
+const agent = new Agent("my-agent", fn, {
+  client: { model: "gpt-4-1106-preview" },
+});
+
+// Create a context
+const context = new Context();
+
+// Add the functions to the contex's function map anbd enable them
+addToMap(context.functions, true);
+
+// Now the agent can use the functions in the context
+```
+
+## Functions
+
+### `author`
+
+Get the author by ID.
+
+| Parameter | Type     | Description |
+| --------- | -------- | ----------- |
+| `id`      | `string` | Author ID   |
+
+### `paper`
+
+Get the paper by ID.
+
+| Parameter | Type     | Description |
+| --------- | -------- | ----------- |
+| `id`      | `string` | Paper ID    |
+
+### `search`
+
+Search for papers.
+
+| Parameter | Type     | Description |
+| --------- | -------- | ----------- |
+| `query`   | `string` | Search term |
+
+## See Also
+
+- [Semantic Scholar API](https://api.semanticscholar.org/)
+- [Delpi](https://github.com/WeCanDoBetter/delphi)
+- [SemanticScholarJS](https://github.com/thomasuebi/semanticscholarjs)
