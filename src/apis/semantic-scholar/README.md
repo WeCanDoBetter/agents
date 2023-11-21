@@ -4,6 +4,21 @@ This API provides access to the
 [Semantic Scholar](https://www.semanticscholar.org/) database of papers and
 citations for [Delphi](https://github.com/WeCanDoBetter/delphi).
 
+## Implemented
+
+- [x] get_paper (single paper)
+- [ ] get_papers (multiple papers at once)
+- [ ] getPaperAuthors
+- [ ] getPaperCitations
+- [ ] getPaperReferences
+- [x] search_paper (search by query)
+- [x] get_author
+- [ ] get_authors
+- [ ] get_author_papers
+- [ ] search_author (search by query)
+- [ ] get_recommended_papers
+- [ ] get_recommended_papers_from_lists
+
 ## Example
 
 ```ts
