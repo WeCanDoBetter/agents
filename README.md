@@ -5,9 +5,15 @@ agent framework that streamlines chatbots and AI-driven agent systems.
 
 ## Agents
 
+### APIs
+
 - [Wikipedia](./src/apis/wikipedia/README.md)
 - [PubMed](./src/apis/pubmed/README.md)
 - [Semantic Scholar](./src/apis/semantic-scholar/README.md)
+
+### Utilities
+
+- [NLP](./src/utilities/nlp/README.md) (readability scores, etc.)
 
 ## Example
 

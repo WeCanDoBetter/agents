@@ -50,9 +50,14 @@
   },
   "dependencies": {
     "@wecandobetter/delphi": "^0.0.1-alpha.1",
+    "flesch-kincaid": "^2.0.1",
     "nasa-sdk": "^1.1.11",
     "node-ncbi": "^0.7.3",
+    "retext-latin": "^4.0.0",
     "semanticscholarjs": "^1.0.4",
+    "syllable": "^5.0.1",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0",
     "wikipedia": "^2.1.1"
   }
 }
