@@ -10,21 +10,20 @@ export const functions = [
 ] as const;
 
 /**
- * Get the function map for the Semantic Scholar API. The functions are disabled by default.
+ * Get the function map for the Semantic Scholar API.
+ * @param enable Whether the functions should be enabled or disabled (default: false).
  */
-export function getMap(): FunctionMap {
-  const map = new FunctionMap(functions);
-  map.disableAll();
-  return map;
+export function getMap(enable = false): FunctionMap {
+  return new FunctionMap(functions, enable);
 }
 
 /**
  * Add the Semantic Scholar functions to the function map.
  * @param map The function map to add the functions to.
- * @param enabled Whether the functions should be enabled or disabled.
+ * @param enable Whether the functions should be enabled or disabled (default: false).
  */
-export function addToMap(map: FunctionMap, enabled = true): void {
+export function addToMap(map: FunctionMap, enable = false): void {
   for (const func of functions) {
-    map.addFunction(func as AgentFunction<any, any>, enabled);
+    map.addFunction(func as AgentFunction<any, any>, enable);
   }
 }

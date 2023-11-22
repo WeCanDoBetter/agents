@@ -1,9 +1,35 @@
-# Agents for [Delphi](https://github.com/WeCanDoBetter/delphi)
+# Agents for Delphi
 
-This repo contains agents for Delphi, a versatile and adaptable conversational
-agent framework that streamlines chatbots and AI-driven agent systems.
+This repo contains agents for [Delphi](https://github.com/WeCanDoBetter/delphi),
+a versatile and adaptable conversational agent framework that streamlines
+chatbots and AI-driven agent systems.
+
+## Usage
+
+Clone the repo, install the dependencies, and build the project:
+
+```sh
+git clone https://github.com/WeCanDoBetter/delphi.git
+cd delphi
+npm install
+npm run build:ts
+```
+
+Then, import the agents you want to use. For example:
+
+```ts
+import { wikipedia } from "./agents/dist";
+```
 
 ## Agents
+
+They are more like
+[agent functions](https://wecandobetter.github.io/delphi/api/agent_function.html),
+anyway. Each provides a set of functions that can be used by a Delphi agent.
+
+See the [Delphi documentation](https://wecandobetter.github.io/delphi/) for more
+information. The [repository](https://github/com/WeCanDoBetter/delphi) also
+contains a number of examples.
 
 ### APIs
 
@@ -21,16 +47,19 @@ agent framework that streamlines chatbots and AI-driven agent systems.
 import { wikipedia } from "./index";
 import { Context } from "@wecandobetter/delphi";
 
-const functionMap = wikipedia.getMap();
-const context = new Context([/* messages */], functionMap);
+// Get a map of functions for the Wikipedia API
+// Enable the functions by passing true
+const functionMap = wikipedia.getMap(true);
+
+// Create a context with the functions
+const context = new Context({
+  messages: [],
+  functions: functionMap,
+});
 
 // use the context on a Delphi agent, e.g.:
 // const result = await agent.run(context);
 ```
-
-See the [Delphi documentation](https://wecandobetter.github.io/delphi/) for more
-information. The [Delphi repository](https://github/com/WeCanDoBetter/delphi)
-also contains a number of examples.
 
 ## Related
 
